@@ -10,13 +10,14 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAr-MNPDOOdsgXoiyVAC0aQBmguepM2oM0",
-  authDomain: "foodies-with-firebase-auth.firebaseapp.com",
-  projectId: "foodies-with-firebase-auth",
-  storageBucket: "foodies-with-firebase-auth.appspot.com",
-  messagingSenderId: "952533970630",
-  appId: "1:952533970630:web:5f6742cf59137969adb1c7"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
